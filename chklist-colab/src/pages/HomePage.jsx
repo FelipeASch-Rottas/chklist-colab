@@ -31,7 +31,6 @@ export default function HomePage() {
   const handleGerarPDF = () => {
     navigateTo('pdf')
   }
-
   // Grupos de checkboxes com estrutura melhorada
   const checklistGroups = [
         {
@@ -66,13 +65,89 @@ export default function HomePage() {
         { id: 'mobuss-item2', label: 'Liberar permissões' },
       ],
     },
+    {
+      id: 'flowreset',
+      name: 'FlowReset',
+      items: [
+        { id: 'flowreset-item1', label: 'Criar login' },
+      ],
+    },
+    {
+      id: 'megaerp',
+      name: 'Mega ERP',
+      items: [
+        { id: 'megaerp-item1', label: 'Ajustar grupo do usuário' },
+        { id: 'megaerp-item2', label: 'Liberar ou copiar permissões' },
+        { id: 'megaerp-item3', label: 'Configurar expiração de senha' },
+        { id: 'megaerp-item4', label: 'Liberar módulos de materiais' },
+      ],
+    },
+        {
+      id: 'approvo',
+      name: 'Approvo',
+      items: [
+        { id: 'approvo-item1', label: 'Criar login' },
+      ],
+    },
+    {
+      id: 'mereo',
+      name: 'Mereo',
+      items: [
+        { id: 'mereo-item1', label: 'Criar login' },
+        { id: 'mereo-item2', label: 'Garantir área correta' },
+      ],
+    },
+    {
+      id: 'cvcrm',
+      name: 'CV CRM',
+      items: [
+        { id: 'cvcrm-item1', label: 'Criar login' },
+      ],
+    },
+    {
+      id: 'seniorx',
+      name: 'Senior X',
+      items: [
+        { id: 'seniorx-item1', label: 'Criar login' },
+        { id: 'seniorx-item2', label: 'Liberar permissões' },
+      ],
+    },
+    {
+      id: 'clicksign',
+      name: 'ClickSign',
+      items: [
+        { id: 'clicksign-item1', label: 'Criar login' },
+        { id: 'clicksign-item2', label: 'Vincular grupos de acesso' },
+      ],
+    },
+    {
+      id: 'docusign',
+      name: 'DocuSign',
+      items: [
+        { id: 'docusign-item1', label: 'Criar login (Sender)' },
+      ],
+    },
+        {
+      id: 'prevision',
+      name: 'Prevision',
+      items: [
+        { id: 'prevision-item1', label: 'Criar login' },
+      ],
+    },
+    {
+      id: 'blip',
+      name: 'Blip',
+      items: [
+        { id: 'blip-item1', label: 'Adicionar atendente' },
+        { id: 'blip-item2', label: 'Liberar permissões' },
+      ],
+    },
   ]
 
   return (
     <div className="home-page">
       <div className="container">
         <h1>Checklist de Admissão</h1>
-
         <form className="form-section">
           <div className="form-group">
             <label htmlFor="nome">Nome</label>

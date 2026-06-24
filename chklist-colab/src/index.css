@@ -60,7 +60,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: 0 0% 7.1%;
     --foreground: 0 0% 95%;

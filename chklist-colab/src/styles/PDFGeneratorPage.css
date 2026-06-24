@@ -370,3 +370,22 @@
     font-size: 14px;
   }
 }
+
+/* Evita que o bloco com os dados do usuário (Nome, Cargo...) seja cortado */
+.info-section {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Evita que um card de sistema seja cortado ao meio na virada da página */
+.system-card {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  margin-bottom: 15px; /* Garante um espaçamento saudável entre eles */
+}
+
+/* Opcional: Se quiser que o título de "Sistemas Liberados" não fique isolado no fim de uma página */
+.systems-access-section h2 {
+  page-break-after: avoid !important;
+  break-after: avoid !important;
+}
