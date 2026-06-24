@@ -1,0 +1,146 @@
+.checklist-group {
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 0.125rem);
+  overflow: hidden;
+  background-color: hsl(var(--background));
+}
+
+.group-header {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(var(--muted));
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.group-header:hover {
+  background-color: hsl(var(--muted) / 0.8);
+}
+
+.chevron-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: hsl(var(--primary));
+}
+
+.chevron-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.group-header-content {
+  flex: 1;
+  text-align: left;
+}
+
+.group-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.group-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.group-percentage {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  min-width: 70px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: hsl(var(--input));
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary)),
+    hsl(var(--primary) / 0.8)
+  );
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.group-items {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.checkbox-item input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: hsl(var(--primary));
+  flex-shrink: 0;
+}
+
+.checkbox-item label {
+  margin: 0;
+  color: hsl(var(--foreground));
+  font-weight: 400;
+  cursor: pointer;
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .group-header {
+    padding: 0.75rem;
+  }
+
+  .group-title {
+    font-size: 15px;
+  }
+
+  .group-percentage {
+    font-size: 11px;
+    min-width: 65px;
+  }
+
+  .progress-bar {
+    min-width: 60px;
+  }
+
+  .group-items {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+}

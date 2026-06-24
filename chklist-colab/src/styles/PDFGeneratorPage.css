@@ -1,0 +1,372 @@
+.pdf-generator-page {
+  min-height: 100vh;
+  background-color: hsl(var(--page-bg));
+  padding: 2rem 1.25rem;
+  font-family: var(--font-sans);
+}
+
+.pdf-generator-page .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pdf-generator-page .btn-back {
+  background-color: hsl(var(--card));
+  color: hsl(var(--primary));
+  padding: 0.625rem 1.25rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 0.125rem);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.25rem;
+}
+
+.pdf-generator-page .btn-back:hover {
+  background-color: hsl(var(--muted));
+  border-color: hsl(var(--border));
+}
+
+.pdf-generator-page .btn-back:active {
+  background-color: hsl(var(--muted) / 0.8);
+}
+
+.pdf-generator-page .content-preview {
+  background-color: hsl(var(--card));
+  border-radius: calc(var(--radius) + 0.25rem);
+  padding: 2.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid hsl(var(--border));
+}
+
+.pdf-generator-page h1 {
+  color: hsl(var(--foreground));
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pdf-generator-page .info-section {
+  background-color: hsl(var(--muted));
+  border-radius: calc(var(--radius) - 0.125rem);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.pdf-generator-page .info-group {
+  margin-bottom: 1rem;
+}
+
+.pdf-generator-page .info-group:last-child {
+  margin-bottom: 0;
+}
+
+.pdf-generator-page .info-group label {
+  display: block;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.375rem;
+  font-size: 14px;
+}
+
+.pdf-generator-page .info-group p {
+  color: hsl(var(--foreground));
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pdf-generator-page .checklist-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.pdf-generator-page .checklist-section h2 {
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pdf-generator-page .total-progress {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: hsl(var(--muted));
+  border-radius: calc(var(--radius) - 0.125rem);
+}
+
+.pdf-generator-page .total-percentage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.pdf-generator-page .total-percentage .label {
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.pdf-generator-page .total-percentage .percentage {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+.pdf-generator-page .progress-bar-large {
+  height: 12px;
+  background-color: hsl(var(--input));
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.pdf-generator-page .progress-fill-large {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary)),
+    hsl(var(--primary) / 0.8)
+  );
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+.pdf-generator-page .groups-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pdf-generator-page .group-summary {
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 0.125rem);
+  overflow: hidden;
+}
+
+.pdf-generator-page .group-header-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: hsl(var(--muted));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.pdf-generator-page .group-header-summary h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.pdf-generator-page .group-stat {
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  background-color: hsl(var(--background));
+  padding: 0.25rem 0.75rem;
+  border-radius: calc(var(--radius) - 0.375rem);
+}
+
+.pdf-generator-page .group-items-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pdf-generator-page .group-items-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  background-color: hsl(var(--background));
+  border-radius: calc(var(--radius) - 0.375rem);
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pdf-generator-page .group-items-list li.checked {
+  background-color: hsl(var(--success) / 0.15);
+  color: hsl(var(--success));
+  font-weight: 500;
+}
+
+.pdf-generator-page .checklist-result {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pdf-generator-page .checklist-result li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem;
+  background-color: hsl(var(--muted));
+  border-radius: calc(var(--radius) - 0.375rem);
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pdf-generator-page .checklist-result li.checked {
+  background-color: hsl(var(--success) / 0.15);
+  color: hsl(var(--success));
+  font-weight: 500;
+}
+
+.pdf-generator-page .checkbox-icon {
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.pdf-generator-page .btn {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: calc(var(--radius) - 0.125rem);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+}
+
+.pdf-generator-page .btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--primary));
+}
+
+.pdf-generator-page .btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+  border-color: hsl(var(--primary) / 0.9);
+}
+
+.pdf-generator-page .btn-primary:active {
+  background-color: hsl(var(--primary) / 0.8);
+  border-color: hsl(var(--primary) / 0.8);
+}
+
+.pdf-generator-page .btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pdf-generator-page .systems-access-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.pdf-generator-page .systems-access-section h2 {
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pdf-generator-page .systems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pdf-generator-page .system-card {
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 0.125rem);
+  padding: 1rem;
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.pdf-generator-page .system-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.pdf-generator-page .access-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pdf-generator-page .access-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: hsl(var(--background));
+  border-radius: calc(var(--radius) - 0.375rem);
+}
+
+.pdf-generator-page .access-item .label {
+  font-weight: 600;
+  font-size: 13px;
+  color: hsl(var(--foreground));
+}
+
+.pdf-generator-page .access-item .value {
+  font-size: 14px;
+  color: hsl(var(--foreground));
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.pdf-generator-page .no-systems {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: hsl(var(--muted));
+  border-radius: calc(var(--radius) - 0.125rem);
+  color: hsl(var(--muted-foreground));
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .pdf-generator-page {
+    padding: 1rem;
+  }
+
+  .pdf-generator-page .content-preview {
+    padding: 1.5rem;
+    border-radius: calc(var(--radius) + 0.125rem);
+  }
+
+  .pdf-generator-page h1 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .pdf-generator-page .info-group p {
+    font-size: 14px;
+  }
+}
